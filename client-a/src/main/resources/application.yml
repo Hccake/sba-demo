@@ -1,0 +1,26 @@
+# 项目端口号
+server:
+  port: 9090
+
+spring:
+  application:
+    name: client-a
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:9999
+        username: user
+        password: password
+        instance:
+          prefer-ip: true
+
+# 暴露监控端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    root: debug
